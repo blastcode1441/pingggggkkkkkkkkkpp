@@ -1335,7 +1335,8 @@ client.on('message', async rokz => {
 
     
 
-    client.on('message',async message => {
+    
+client.on('message',async message => {
 
 let mention = message.mentions.members.first();
 
@@ -1351,19 +1352,19 @@ if(message.guild.id !== '502772079347630081') return;
 if(!mention) return message.reply("منشن شخص");
 
 
-var embed = new Discord.RichEmbed()
 
-.addField('» تم رفض', `${mention}`,true)
+Room.send(`
+**» العضو :** ${mention}
 
-.addField('» بواسطة', `${message.author}`,true)
-
-Room.send(embed);
+[ :x: ] :: لقد تم رفض العضو`);
 
 }
 
 });
+  
 
-  client.on('message',async message => {
+    
+client.on('message',async message => {
 
 let mention = message.mentions.members.first();
 
@@ -1379,45 +1380,11 @@ if(message.guild.id !== '502772079347630081') return;
 if(!mention) return message.reply("منشن شخص");
 
 
-var embed = new Discord.RichEmbed()
-
-.addField('» تم قبول', `${mention}`,true)
-
-.addField('» بواسطة', `${message.author}`,true)
-
-Room.send(embed);
-
-}
-
-});
-
-    
-client.on('message',async message => {
-
-let mention = message.mentions.members.first();
-
-let Room = client.channels.get('502796059966439424');
-
-if(message.content.startsWith(prefix + "قبو")) {
-
-if(message.guild.id !== '502772079347630081') return;
-
- if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("**للأسف ليس لديك صلاحية**").then(msg => msg.delete(5000));
-
-
-if(!mention) return message.reply("منشن شخص");
-
-
-var embed = new Discord.RichEmbed()
-
-.addField('» تم قبول', `${mention}`,true)
-
-.addField('» بواسطة', `${message.author}`,true)
 
 Room.send(`
-» العضو : ${mention}
+**» العضو :** ${mention}
 
-[ :greenTick: ] :: لقد تم قبول العضو واعطائه رتبة سبورت`);
+[ :white_check_mark: ] :: لقد تم قبول العضو واعطائه رتبة سبورت`);
 
 }
 
