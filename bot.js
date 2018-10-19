@@ -1260,7 +1260,7 @@ client.on('message', async rokz => {
         co.first().delete();
 
 
-       e.edit(`خبرتك
+       e.edit(`كم هي المدة ؟
 
 [${lang}]`)
 
@@ -1273,7 +1273,7 @@ client.on('message', async rokz => {
           col.first().delete();
 
 
-            e.edit(`فرق بين const and var
+            e.edit(`ما هي خبرتك ؟
 
 [${time}]
 
@@ -1306,20 +1306,11 @@ client.on('message', async rokz => {
 
               rokzz.send(`
 
-تقديم من ${rokz.author}
+» اللغة : **${lang}**
+» المدة : **${time}**
+» الخبرة : **${expe}**
 
-اللغه:
-
-\`${lang}\`
-
-المده:
-
-\`${time}\`
-
-الخبره:
-
-\`${expe}\`
-
+تم التقديم بواسطة: ${rokz.author}
 `).then(rokzzz => {
 
                   rokzzz.react("✅")
