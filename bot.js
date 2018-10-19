@@ -76,18 +76,17 @@ client.on("ready", () => {
 
 const code = '-';
 
-
 client.on('message',async message => {
 
     if(message.content.startsWith(code + "js")) {
 
   if(!message.channel.guild) return message.reply(' ');
 
-    let rank = message.guild.member(message.author).roles.find('name', '- Support');
+    let rank = message.guild.member(message.author).roles.find('name', '⇒ Support');
 
     if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة سبورت لأستخدام هذا الأمر.**');
 
-    let jscodes = message.guild.channels.find(`name`, "codes-js");
+    let jscodes = message.guild.channels.find(`name`, "code-js");
 
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
 
@@ -232,8 +231,10 @@ ${thisMessage}\`\`\`
 );
 
       })}});
+
+
       
-    client.on('message',async message => {
+client.on('message',async message => {
 
     if(message.content.startsWith(code + "py")) {
 
@@ -243,7 +244,7 @@ ${thisMessage}\`\`\`
 
     if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة سبورت لأستخدام هذا الأمر.**');
 
-    let jscodes = message.guild.channels.find(`name`, "codes-py");
+    let jscodes = message.guild.channels.find(`name`, "code-py");
 
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
 
@@ -400,7 +401,7 @@ ${thisMessage}\`\`\`
 
     if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة سبورت لأستخدام هذا الأمر.**');
 
-    let jscodes = message.guild.channels.find(`name`, "codes-html");
+    let jscodes = message.guild.channels.find(`name`, "code-html");
 
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
 
