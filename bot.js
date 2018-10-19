@@ -611,12 +611,7 @@ client.on('message', async message =>{
       .setDescription(`** 
 
 
-  ____  _             
- |  _ \(_)_ __   __ _ 
- | |_) | | '_ \ / _` |
- |  __/| | | | | (_| |
- |_|   |_|_| |_|\__, |
-                |___/ 
+  
 
 
 _─══════ {✯Ping Development✯} ══════─_
