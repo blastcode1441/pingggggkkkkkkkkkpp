@@ -86,7 +86,7 @@ client.on('message',async message => {
 
     if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة سبورت لأستخدام هذا الأمر.**');
 
-    let jscodes = message.guild.channels.find(`name`, "code-js");
+    let jscodes = message.guild.channels.find('name', "code-js");
 
     if(!jscodes) return message.channel.send(":x:لم اجد الروم الخاص بنشر الاكواد");
 
