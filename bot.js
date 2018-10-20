@@ -641,11 +641,8 @@ const request = require('request');
 
 const Canvas = require("canvas");
 
-const fs = require("fs");
-
 const jimp = require("jimp");
 
-const moment = require("moment")
 
 
 
