@@ -119,14 +119,19 @@ client.on('voiceStateUpdate', (u, member) => {
 
 
 
+    
+      
+client.on('guildMemberAdd', member => {
+
+    let channel = member.guild.channels.find('name', 'chat');
+
+      if (!channel) return;   
+
+      channel.send("**Welcome To Ping Development :yellow_heart:**")
+
+    });
 
 
-
-client.on("message", function(message){
-
-client.emit("guildMemberAdd", message.author);
-
-});
 
 client.on("guildMemberAdd", m => {
         let room = m.guild.channels.find(a => a.name === 'chat'); //
