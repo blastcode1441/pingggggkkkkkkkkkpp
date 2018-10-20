@@ -95,20 +95,6 @@ client.on('message',async message => {
 
  
 
-client.on('message', message => {
-  if(message.content.startsWith("#credit <@470366007748198401>","#credits <@470366007748198401>")) {
-    let role = message.guild.roles.find("name", "Donator");
-    if(!role) {
-      return message.channel.send('Thanks for your support. ❤');
-    }
-      message.member.addRole(role);
-      let embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setAuthor("Thanks for you support you have given the Donator role.");
-
-        message.author.sendEmbed(embed);
-  }
-});
 
 
 client.on('voiceStateUpdate', (u, member) => {
