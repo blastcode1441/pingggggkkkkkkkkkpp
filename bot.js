@@ -120,7 +120,8 @@ client.on('voiceStateUpdate', (u, member) => {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = client.channels.find("name", "chat");
+    var channel = client.channels.find("name", "chat");
+ 
       if (!channel) return;   
       channel.send("**Welcome To Ping Development :yellow_heart:**")
     });
