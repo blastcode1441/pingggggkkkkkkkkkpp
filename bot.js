@@ -81,7 +81,7 @@ client.on('message',async message => {
 
     topRoyale.addField(`**TOP 5 VOICE 🎙**`, _voiceText,true);
 
-    topRoyale.setFooter(`Ping Development`, message.guild.iconURL);
+    topRoyale.setFooter(`Ping Pong TeaM`, message.guild.iconURL);
 
     message.channel.send(topRoyale).catch(e => {
 
@@ -155,7 +155,7 @@ var mentionned = message.mentions.members.first();
 .addField(': دخولك لديسكورد قبل', `${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} **\n** \`${moment(heg.createdTimestamp).fromNow()}\`` ,true) 
 .addField(': انضمامك لسيرفر قبل', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
 .addField(': عدد الدعوات', inviteCount,false)
-.setFooter("Ping Development")  
+.setFooter("Ping Pong")  
     message.channel.sendEmbed(id);
 })
 }
@@ -172,7 +172,7 @@ client.on('guildMemberAdd', member => {
 
       if (!channel) return;   
 
-      channel.send("**Welcome To Ping Development :yellow_heart:**")
+      channel.send("**Welcome To Ping Pong! :yellow_heart:**")
 
     });
 
@@ -316,7 +316,7 @@ client.on("guildMemberAdd", m => {
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-**Ping Development© :arrow_down:** 
+**Ping Pong© :arrow_down:** 
 
 \`\`\`html
 
@@ -479,7 +479,7 @@ client.on('message',async message => {
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-**Ping Development© :arrow_down:** 
+**Ping Pong© :arrow_down:** 
 
 \`\`\`js
 
@@ -645,7 +645,7 @@ client.on('message',async message => {
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-**Ping Development© :arrow_down:** 
+**Ping Pong© :arrow_down:** 
 
 \`\`\`py
 
@@ -1363,7 +1363,7 @@ client.on('message', async message =>{
   
 
 
-_─══════ {✯Ping Development✯} ══════─_
+_─══════ {✯Ping Pong✯} ══════─_
 
 __الاوامرالخاصة__:spy::skin-tone-1: 
 
@@ -1397,7 +1397,7 @@ __اوامر صاحب البوت__:cherry_blossom:
 \`\`-roleremove\`\`| ازالة رتبة من شخص
 \`\`-say\`\`| التكلم عبر البوت
 
-_─══════ {✯Ping Development✯} ══════─_
+_─══════ {✯Ping Pong✯} ══════─_
 
 **`)
 
@@ -1438,8 +1438,14 @@ message.react("📩")
 client.on('message', async rokz => {
 
     if(rokz.content.startsWith(prefix + "تقديم")) {
+var modRole = rokz.guild.roles.find(r => r.name === '- Support');
 
-      let lang = '';
+       
+
+        if(rokz.guild.member(rokz.author).roles.has(modRole.id)) return rokz.channel.send(':x: | معك الرتبة');
+
+
+      let lang = '';
 
       let time = '';
 
