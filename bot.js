@@ -149,9 +149,9 @@ ${thisMessage}\`\`\`
 
 **المصدر / الشخص الذي صنع الكود**: ${boi2}`).then(rokzzz => {
 
-                  rokzzz.react(":CheckMark:")
+                  rokzzz.react("CheckMark")
 
-                  rokzzz.react(":WrongMark:")
+                  rokzzz.react("WrongMark")
 
                 })
 
