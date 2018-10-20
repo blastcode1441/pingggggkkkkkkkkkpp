@@ -147,7 +147,13 @@ ${thisMessage}\`\`\`
 
 **تم النشر بواسطة**: ${message.author}
 
-**المصدر / الشخص الذي صنع الكود**: ${boi2}`); 
+**المصدر / الشخص الذي صنع الكود**: ${boi2}`).then(rokzzz => {
+
+                  rokzzz.react(":CheckMark:")
+
+                  rokzzz.react(":WrongMark:")
+
+                })
 
           }
 
@@ -1313,9 +1319,9 @@ client.on('message', async rokz => {
 تم التقديم بواسطة: ${rokz.author}
 `).then(rokzzz => {
 
-                  rokzzz.react("✅")
+                  rokzzz.react(":CheckMark:")
 
-                  rokzzz.react("❌")
+                  rokzzz.react(":WrongMark:")
 
                 })
 
