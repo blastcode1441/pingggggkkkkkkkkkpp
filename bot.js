@@ -117,13 +117,15 @@ client.on('voiceStateUpdate', (u, member) => {
 
 });
 
+
+
 client.on('guildMemberAdd', member => {
 
-    let channel = member.guild.channels.find('name', 'chat');
+    let channel = member.guild.channels.find('name', '👉-welcome-👈');
 
       if (!channel) return;   
 
-      channel.send("**Welcome To Ping Development :yellow_heart:**")
+      channel.send("**Welcome To xRGRx :yellow_heart:**")
 
     });
 
@@ -133,8 +135,6 @@ client.emit("guildMemberAdd", message.author);
 
 });
 
-
-    });
 
 client.on("guildMemberAdd", m => {
         let room = m.guild.channels.find(a => a.name === 'chat'); //
