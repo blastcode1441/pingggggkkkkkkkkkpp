@@ -121,11 +121,11 @@ client.on('voiceStateUpdate', (u, member) => {
 
 client.on('guildMemberAdd', member => {
 
-    let channel = member.guild.channels.find('name', '👉-welcome-👈');
+    let channel = member.guild.channels.find('name', 'chat');
 
       if (!channel) return;   
 
-      channel.send("**Welcome To xRGRx :yellow_heart:**")
+      channel.send("**Welcome To Ping Development :yellow_heart:**")
 
     });
 
