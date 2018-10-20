@@ -122,9 +122,9 @@ client.on('voiceStateUpdate', (u, member) => {
 
 client.on('message', msg => {
 
-  if (msg.content === "#credit <@470366007748198401>","#credits <@470366007748198401>") {
+  if (msg.content === '#credit <@470366007748198401') {
 
-    msg.channel.send('**Thanks for your support. ❤**');
+    msg.reply('**Thanks for your support. ❤**');
 
   }
 
