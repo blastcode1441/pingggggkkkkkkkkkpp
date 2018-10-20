@@ -1,12 +1,14 @@
 const Discord = require('discord.js');
 
+const moment = require("moment");
+
 const client = new Discord.Client();
 
 const prefix = "-"
 
 client.on('ready', () => {
 
-
+//انت يا طفل القيت هب ايش تسوي هنا ؟؟؟
 
   
 
@@ -14,6 +16,24 @@ client.on('ready', () => {
 
 });
 
+
+
+client.on("guildMemberAdd", m => {
+        let room = m.guild.channels.find(a => a.name === 'chat'); //
+    if (datediff(parseDate(moment(m.user.createdTimestamp).format('l')), parseDate(moment().format('l'))) < 8) {
+        m.ban() .then((
+            room.send(`**:no_entry: | ${m} Has been banned for: \`fake\`**`)
+        ));
+    };
+    function parseDate(str) {
+        var mdy = str.split('/');
+        return new Date(mdy[2], mdy[0]-1, mdy[1]);
+    };
+    
+    function datediff(first, second) {
+        return Math.round((second-first)/(1000*60*60*24));
+    };
+});
 
  client.on('message',async message => {
 
