@@ -119,12 +119,7 @@ client.on('voiceStateUpdate', (u, member) => {
 
 
 
-client.on('guildMemberAdd', member => {
-    var channel = client.channels.find("name", "chat");
- 
-      if (!channel) return;   
-      channel.send("**Welcome To Ping Development :yellow_heart:**")
-    });
+
 
 
 client.on("message", function(message){
@@ -133,9 +128,8 @@ client.emit("guildMemberAdd", message.author);
 
 });
 
-
 client.on("guildMemberAdd", m => {
-        var room = client.guilds.get(m.guild.id).channels.find("name", `chat`);
+        let room = m.guild.channels.find(a => a.name === 'chat'); //
     if (datediff(parseDate(moment(m.user.createdTimestamp).format('l')), parseDate(moment().format('l'))) < 8) {
         m.ban() .then((
             room.send(`**:no_entry: | ${m} Has been banned for: \`fake\`**`)
@@ -150,6 +144,7 @@ client.on("guildMemberAdd", m => {
         return Math.round((second-first)/(1000*60*60*24));
     };
 });
+
 
  client.on('message',async message => {
 
