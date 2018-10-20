@@ -81,7 +81,7 @@ client.on('message',async message => {
 
     topRoyale.addField(`**TOP 5 VOICE 🎙**`, _voiceText,true);
 
-    topRoyale.setFooter(`Developed By:.RoyaleYouseeF¹⁵#5335`, message.guild.iconURL);
+    topRoyale.setFooter(`Ping Development`, message.guild.iconURL);
 
     message.channel.send(topRoyale).catch(e => {
 
