@@ -147,11 +147,11 @@ ${thisMessage}\`\`\`
 
 **تم النشر بواسطة**: ${message.author}
 
-**المصدر / الشخص الذي صنع الكود**: ${boi2}`).then(rokzzz => {
+**المصدر / الشخص الذي صنع الكود**: ${boi2}`).then(ping => {
 
-                  rokzzz.react("✅")
+                  ping.react("✅")
 
-                  rokzzz.react("❌")
+                  ping.react("❌")
 
                 })
 
@@ -310,7 +310,14 @@ ${thisMessage}\`\`\`
 
 **تم النشر بواسطة**: ${message.author}
 
-**المصدر / الشخص الذي صنع الكود**: ${boi2}`); 
+**المصدر / الشخص الذي صنع الكود**: ${boi2}`).then(ping => {
+
+                  ping.react("✅")
+
+                  ping.react("❌")
+
+                })
+
 
           }
 
@@ -469,7 +476,14 @@ ${thisMessage}\`\`\`
 
 **تم النشر بواسطة**: ${message.author}
 
-**المصدر / الشخص الذي صنع الكود**: ${boi2}`); 
+**المصدر / الشخص الذي صنع الكود**: ${boi2}`).then(ping => {
+
+                  ping.react("✅")
+
+                  ping.react("❌")
+
+                })
+
 
           }
 
