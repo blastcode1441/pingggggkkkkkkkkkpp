@@ -1455,7 +1455,7 @@ var modRole = rokz.guild.roles.find(r => r.name === '- Support');
 
       let fillter = m => m.author.id === rokz.author.id
 
-      await rokz.channel.send("ما لغتك ؟").then(e => {
+      await rokz.channel.send("- أكتب لغتك البرمجية الان").then(e => {
 
      rokz.channel.awaitMessages(fillter, { time: 60000, max: 1 })
 
@@ -1466,7 +1466,7 @@ var modRole = rokz.guild.roles.find(r => r.name === '- Support');
         co.first().delete();
 
 
-       e.edit(`كم هي المدة ؟
+       e.edit(`- أكتب مدة خبرتك البرمجية الان 
 
 [${lang}]`)
 
@@ -1479,7 +1479,7 @@ var modRole = rokz.guild.roles.find(r => r.name === '- Support');
           col.first().delete();
 
 
-            e.edit(`ما هي خبرتك ؟
+            e.edit(`- أكتب خبرتك البرمجية الان 
 
 [${time}]
 
